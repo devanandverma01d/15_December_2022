@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Function-2</title>
+    <style>
+        #form1 {
+            width: 500px;
+            height: 400px;
+            background-color: lightgray;
+            padding: 20px;
+            margin: 100px auto;
+            border-radius: 15px;
+            box-shadow: 10px 10px 2px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #393939;">
+    <form action="" id="form1">
+        <h1 style="color:red; text-align: center;">Registration Form</h1>
+        <hr><br>
+        <label for="">First Name:</label><br>
+        <input type="text" name="fname"><br>
+        <label for="">Last Name:</label><br>
+        <input type="text" name="lname"><br><br>
+        <input type="submit" value="Submit" onclick="display(event)">
+
+        <ul id='demo'>
+            <li></li>
+        </ul>
+    </form>
+
+
+
+
+    <script>
+        function display(e) {
+            e.preventDefault();
+            //console.log("OK");
+            //document.write('Hello');
+            var x = document.querySelector('input[name="fname"]');
+            var y = document.querySelector('input[name="lname"]');
+            //document.write(x.value + " " + y.value);
+            //document.write(y.value);
+            console.log(x.value + " " + y.value);
+            console.log(y.value);
+
+            var z = document.getElementById('demo').innerHTML += x.value + " " + y.value + " ";
+
+        }
+    </script>
+</body>
+
+</html>

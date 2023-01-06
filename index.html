@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Function</title>
+    <style>
+        #form1 {
+            width: 600px;
+            height: 400px;
+            background-color: aqua;
+            padding: 20px;
+            margin: 100px auto;
+            box-shadow: 10px 10px 5px;
+            border-radius: 25px;
+        }
+    </style>
+    <script src="./js/script.js"></script>
+    <script>
+
+    </script>
+</head>
+
+<body style="background-color: #383838;">
+
+
+    <form action="./img/1.png" id="form1">
+        <h1>Registration Form</h1>
+        <label for="">First Name:</label><br>
+        <input type="text" name="fname"><br>
+        <label for="">Last Name:</label><br>
+        <input type="text" name="lname"><br><br>
+        <input type="submit" value="Submit" onclick="display(event)">
+        <p>If I click on Submit button the form-data will be sent to a page called 1.pang</p>
+        <ul id="my_ul">
+            <li></li>
+        </ul>
+    </form>
+
+
+
+    <script>
+        var myul = document.getElementById('my_ul');
+        myul.innerHTML = " ";
+        //This is function definition
+        function display(e) {
+            e.preventDefault();
+            //document.write('<h1>' + "OK" + '</h1>');
+            //console.log("OK");
+            let y = document.querySelector('input[name="fname"]');
+            let x = document.querySelector('input[name="lname"]');
+            console.log(y.value + " " + x.value);
+            //console.log(x.value);
+            myul.innerHTML += '<li>' + y.value + ' ' + x.value + '</li>'
+        }
+
+
+
+    </script>
+</body>
+
+</html>
